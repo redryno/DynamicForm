@@ -1,0 +1,10 @@
+framework module DynamicForm {
+  umbrella header "DynamicForm-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module DynamicForm.__Swift {
+    exclude header "DynamicForm-Swift.h"
+}

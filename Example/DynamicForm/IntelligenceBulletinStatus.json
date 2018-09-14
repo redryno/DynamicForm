@@ -1,0 +1,46 @@
+[
+   {
+      "rows":[
+         {
+            "cellIdentifier":"Cell",
+            "items":[
+               {
+                  "display":"Open",
+                  "value":"open",
+                  "type":"textLabel"
+               }
+            ]
+         },
+         {
+            "cellIdentifier":"Cell",
+            "items":[
+               {
+                  "display":"Located",
+                  "value":"located",
+                  "type":"textLabel"
+               }
+            ]
+         },
+         {
+            "cellIdentifier":"Cell",
+            "items":[
+               {
+                  "display":"In Custody",
+                  "value":"in_custody",
+                  "type":"textLabel"
+               }
+            ]
+         },
+         {
+            "cellIdentifier":"Cell",
+            "items":[
+               {
+                  "display":"Cancelled",
+                  "value":"cancelled",
+                  "type":"textLabel"
+               }
+            ]
+         }
+      ]
+   }
+]

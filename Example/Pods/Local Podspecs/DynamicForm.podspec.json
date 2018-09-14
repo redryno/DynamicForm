@@ -1,0 +1,23 @@
+{
+  "name": "DynamicForm",
+  "version": "0.1.2",
+  "summary": "Create a form using JSON",
+  "swift_version": "4.0",
+  "description": "Create a form using JSON and edit it as needed.",
+  "homepage": "https://github.com/redryno/DynamicForm",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "redryno": "ryan.bigger@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/redryno/DynamicForm.git",
+    "tag": "0.1.2"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DynamicForm/*.swift"
+}

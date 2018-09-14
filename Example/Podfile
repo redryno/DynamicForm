@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DynamicForm_Example' do
+  pod 'DynamicForm', :path => '../'
+
+  target 'DynamicForm_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

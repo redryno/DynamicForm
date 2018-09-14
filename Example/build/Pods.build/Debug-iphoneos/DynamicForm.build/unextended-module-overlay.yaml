@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/ryanbigger/Documents/Cocoapods/DynamicForm/Example/build/Debug-iphoneos/DynamicForm/DynamicForm.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/ryanbigger/Documents/Cocoapods/DynamicForm/Example/build/Pods.build/Debug-iphoneos/DynamicForm.build/unextended-module.modulemap',
+    }]
+  }]
+}

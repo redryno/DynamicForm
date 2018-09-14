@@ -1,0 +1,11 @@
+framework module DynamicForm {
+  umbrella header "DynamicForm-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module DynamicForm.Swift {
+    header "DynamicForm-Swift.h"
+    requires objc
+}

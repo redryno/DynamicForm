@@ -1,0 +1,16 @@
+PODS:
+  - DynamicForm (0.1.2)
+
+DEPENDENCIES:
+  - DynamicForm (from `../`)
+
+EXTERNAL SOURCES:
+  DynamicForm:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DynamicForm: 893957b2dbb664d21299f126ef1ae1cd8e70d6bc
+
+PODFILE CHECKSUM: 9e5fa78f9a73e2837e4cfea800c8d6a4c8a28a9e
+
+COCOAPODS: 1.5.3
