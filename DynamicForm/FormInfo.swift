@@ -216,7 +216,7 @@ import UIKit
                     formItem.minuteInterval = minuteInterval
                 }
                 if let dateMode = jsonItem["datePickerMode"] as? Int,
-                    let datePickerMode = UIDatePickerMode.init(rawValue: dateMode) {
+                    let datePickerMode = UIDatePicker.Mode.init(rawValue: dateMode) {
                     formItem.datePickerMode = datePickerMode
                 }
             }
@@ -361,7 +361,7 @@ import UIKit
     
     // MARK: -
     
-    public func reloadRows(at rows: [String], with animation: UITableViewRowAnimation) {
+    public func reloadRows(at rows: [String], with animation: UITableView.RowAnimation) {
         var indexPaths = [IndexPath]()
         for (i, section) in sections.enumerated() {
             for (j, row) in section.rows.enumerated() {
@@ -565,7 +565,7 @@ import UIKit
                     picker.maximumDate = item.maximumDate
                     picker.minimumDate = item.minimumDate
                     picker.minuteInterval = item.minuteInterval ?? 1
-                    picker.datePickerMode = item.datePickerMode ?? UIDatePickerMode.dateAndTime
+                    picker.datePickerMode = item.datePickerMode ?? UIDatePicker.Mode.dateAndTime
                     picker.date = item.display as? Date ?? Date()
                 }
                 

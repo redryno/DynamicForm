@@ -235,7 +235,8 @@ class ViewController: KeyboardViewController, UITableViewDataSource, UITableView
     
     // MARK: - UIImagePickerControllerDelegate
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
         if let row = formInfo.row(with: "media") {
             row.height = 137
             tableView.reloadData()
@@ -382,4 +383,3 @@ class ViewController: KeyboardViewController, UITableViewDataSource, UITableView
         }
     }
 }
-

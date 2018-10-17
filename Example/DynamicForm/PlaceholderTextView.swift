@@ -47,7 +47,7 @@ class PlaceholderTextView: UITextView {
     
     deinit {
         NotificationCenter.default.removeObserver(self,
-                                                  name: NSNotification.Name.UITextViewTextDidChange,
+                                                  name: UITextView.textDidChangeNotification,
                                                   object: nil)
     }
     
@@ -58,7 +58,7 @@ class PlaceholderTextView: UITextView {
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(textDidChange(notification:)),
-                                               name: NSNotification.Name.UITextViewTextDidChange,
+                                               name: UITextView.textDidChangeNotification,
                                                object: nil)
         
         placeholderLabel.backgroundColor = UIColor.clear

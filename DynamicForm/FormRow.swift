@@ -10,14 +10,14 @@ import UIKit
 
 @objcMembers public class FormRow: NSObject, NSCopying, NSCoding {
     
-    public var accessoryType: UITableViewCellAccessoryType = .none
+    public var accessoryType: UITableViewCell.AccessoryType = .none
     var cellIdentifier: String = "Cell"
     var hidden: Bool = false
     public var height: CGFloat = 44.0
     public var items = [FormItem]()
     public var name: String = "form_row_name"
     public var segue: String?
-    public var selectionStyle: UITableViewCellSelectionStyle = .default
+    public var selectionStyle: UITableViewCell.SelectionStyle = .default
     
     override public var description: String {
         get {
@@ -53,14 +53,14 @@ import UIKit
     
     public required init?(coder aDecoder: NSCoder) {
         let accessoryTypeRawValue = aDecoder.decodeInteger(forKey: "accessoryType")
-        accessoryType = UITableViewCellAccessoryType(rawValue: accessoryTypeRawValue)!
+        accessoryType = UITableViewCell.AccessoryType(rawValue: accessoryTypeRawValue)!
         cellIdentifier = aDecoder.decodeObject(forKey: "cellIdentifier") as! String
         name = aDecoder.decodeObject(forKey: "name") as! String
         hidden = aDecoder.decodeBool(forKey: "hidden")
         items = aDecoder.decodeObject(forKey: "items") as! [FormItem]
         segue = aDecoder.decodeObject(forKey: "segue") as? String
         let selectionStyleRawValue = aDecoder.decodeInteger(forKey: "selectionStyle")
-        selectionStyle = UITableViewCellSelectionStyle(rawValue: selectionStyleRawValue)!
+        selectionStyle = UITableViewCell.SelectionStyle(rawValue: selectionStyleRawValue)!
     }
     
     public func copy(with zone: NSZone? = nil) -> Any {

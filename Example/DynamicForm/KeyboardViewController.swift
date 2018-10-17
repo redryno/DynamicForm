@@ -31,19 +31,19 @@ class KeyboardViewController: UIViewController {
     func addKeyboardObservers() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow,
+                                               name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillHide(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
         let info : NSDictionary = notification.userInfo! as NSDictionary
-        let size = (info[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size
-        let duration = (info[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
-        let curve = (info[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue
+        let size = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size
+        let duration = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
+        let curve = (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue
         
         keyboardWillShow(size: size!, duration: duration!, curve: curve!)
     }
@@ -54,9 +54,9 @@ class KeyboardViewController: UIViewController {
     
     @objc func keyboardWillHide(notification: NSNotification) {
         let info : NSDictionary = notification.userInfo! as NSDictionary
-        let size = (info[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size
-        let duration = (info[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
-        let curve = (info[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue
+        let size = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size
+        let duration = (info[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
+        let curve = (info[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue
         keyboardWillHide(size: size!, duration: duration!, curve: curve!)
     }
     
@@ -65,8 +65,8 @@ class KeyboardViewController: UIViewController {
     }
     
     func removeKeyboardObservers() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
 }

@@ -30,7 +30,7 @@ import UIKit
     var maximumDate: Date?
     var minimumDate: Date?
     var minuteInterval: Int?
-    var datePickerMode: UIDatePickerMode?
+    var datePickerMode: UIDatePicker.Mode?
     
     // MARK - PickerView
     

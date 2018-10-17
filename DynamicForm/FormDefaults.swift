@@ -10,10 +10,10 @@ import UIKit
 
 class FormDefaults {
     
-    var accessoryType: UITableViewCellAccessoryType = .none
+    var accessoryType: UITableViewCell.AccessoryType = .none
     var height: CGFloat = 44.0
     var items = [String : FormItem]()
-    var selectionStyle: UITableViewCellSelectionStyle = .default
+    var selectionStyle: UITableViewCell.SelectionStyle = .default
     
     func tableViewCell(withIdentifier identifier: String, tableView: UITableView) -> Bool {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier) else {
