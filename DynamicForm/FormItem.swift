@@ -34,8 +34,8 @@ import UIKit
     
     // MARK - PickerView
     
-    var components: [String]?
-    var selectedRow: Int?
+    public var components: [String]?
+    public var selectedRow: Int?
     
     // MARK: - Value
     

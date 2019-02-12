@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DynamicForm'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'Create a form using JSON'
 
   s.swift_version = '4.2'
